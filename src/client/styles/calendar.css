@@ -1,0 +1,81 @@
+.calendar-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Dark mode background override */
+html.dark .calendar-container {
+  background: #1f2937; /* Tailwind's gray-800 */
+  color: #e5e7eb;       /* Tailwind's gray-200 */
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* Optional: style the buttons inside header */
+.calendar-header button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #374151; /* Tailwind gray-700 */
+  transition: color 0.3s;
+}
+
+html.dark .calendar-header button {
+  color: #e5e7eb;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.calendar-day-name {
+  text-align: center;
+  font-weight: bold;
+  color: #444;
+}
+
+html.dark .calendar-day-name {
+  color: #9ca3af; /* Tailwind gray-400 */
+}
+
+.calendar-day {
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #f3f4f6;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+html.dark .calendar-day {
+  background: #374151; /* Tailwind gray-700 */
+  color: #d1d5db; /* Tailwind gray-300 */
+}
+
+.calendar-day.active:hover {
+  background: #cbd5e1;
+}
+
+html.dark .calendar-day.active:hover {
+  background: #4b5563; /* Tailwind gray-600 */
+}
+
+.calendar-day.empty {
+  background: transparent;
+  cursor: default;
+}

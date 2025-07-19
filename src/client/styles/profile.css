@@ -1,0 +1,18 @@
+.profile-card {
+  background-color: var(--card-bg-light);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.profile-card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.profile-card h3 {
+  margin-top: 10px;
+  font-size: 1.4em;
+}

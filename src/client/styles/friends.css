@@ -1,0 +1,55 @@
+.online-friends {
+  background: white;
+  color: #111827;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 300px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: background 0.3s, color 0.3s;
+}
+
+html.dark .online-friends {
+  background: #1f2937; /* gray-800 */
+  color: #f9fafb;      /* gray-50 */
+}
+
+.online-friends h4 {
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.online-friends ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.online-friends li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0;
+  font-size: 1rem;
+}
+
+/* Status dots */
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-dot.online {
+  background-color: #22c55e; /* Tailwind green-500 */
+}
+
+.status-dot.away {
+  background-color: #facc15; /* Tailwind yellow-400 */
+}
+
+.status-dot.offline {
+  background-color: #9ca3af; /* Tailwind gray-400 */
+}
